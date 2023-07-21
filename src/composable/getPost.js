@@ -1,22 +1,22 @@
 import { ref } from "vue";
 
-const getPosts = () => {
-  const posts = ref([]);
+const getPost = (id) => {
+  const post = ref(null);
   const error = ref(null);
 
   const load = async () => {
     try {
-      let data = await fetch("http://localhost:3000/posts");
+      let data = await fetch("http://localhost:3000/posts/" + id);
       if (!data.ok) {
         throw Error("Tidak ada data");
       }
-      posts.value = await data.json();
+      post.value = await data.json();
     } catch (err) {
       error.value = err.message;
     }
   };
 
-  return { posts, error, load };
+  return { post, error, load };
 };
 
-export default getPosts;
+export default getPost;
