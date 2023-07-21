@@ -11,6 +11,30 @@
       "title": "Artikel Kedua",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. tenetur labore expedite mollitia persiciatis!",
       "tags": ["javascript", "react", "angular"]
+    },
+    {
+      "title": "Artikel ke Tiga",
+      "body": "Ini adalah artikel ke tiga",
+      "tags": ["html", "css"],
+      "id": 3
+    },
+    {
+      "title": "Artikel Ke Empat",
+      "body": "Ini adalah artikel ke empat",
+      "tags": ["vue"],
+      "id": 4
+    },
+    {
+      "title": "Artikel Ke Lima",
+      "body": "Ini adadlah artikel ke lima",
+      "tags": ["goalng"],
+      "id": 5
+    },
+    {
+      "title": "Artikel Ke Enam",
+      "body": "Ini adalah artikel ke enam",
+      "tags": ["Sass"],
+      "id": 6
     }
   ]
 }
