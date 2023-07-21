@@ -4,12 +4,21 @@
     <h3>{{ post.title }}</h3>
     <p>{{ post.body }}</p>
   </div>
+  <div v-else>
+    <Loading />
+  </div>
 </template>
 
 <script>
 import getPost from "@/composable/getPost";
+import Loading from "@/components/Loading";
+
 export default {
   props: ["id"],
+  components: {
+    Loading,
+  },
+
   setup(props) {
     const { post, error, load } = getPost(props.id);
 
