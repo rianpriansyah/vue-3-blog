@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Artikel Pertama",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. tenetur labore expedite mollitia persiciatis!",
+      "tags": ["web", "vue", "node"]
+    },
+    {
+      "id": 2,
+      "title": "Artikel Kedua",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. tenetur labore expedite mollitia persiciatis!",
+      "tags": ["javascript", "react", "angular"]
+    }
+  ]
+}
