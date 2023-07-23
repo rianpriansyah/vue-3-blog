@@ -23,8 +23,6 @@
         </div>
       </div>
     </article>
-
-    <hr />
   </div>
   <div v-else>
     <Loading />

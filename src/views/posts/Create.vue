@@ -1,21 +1,44 @@
 <template>
-  <div>
-    <form @submit.prevent="handleSubmit">
-      <div>
-        <label for="">Title</label>
-        <input type="text" v-model="title" />
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="page-heading">
+            <h1>Create new post</h1>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="">Body</label>
-        <textarea cols="30" rows="10" v-model="body"></textarea>
+    </div>
+  </header>
+  <!-- Main Content-->
+  <main class="mb-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="my-5">
+            <form @submit.prevent="handleSubmit">
+              <div class="form-floating">
+                <input class="form-control" type="text" placeholder="Title Post" v-model="title" required />
+                <label>Title</label>
+              </div>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Input Body Post" rows="5" required v-model="body"></textarea>
+                <label for="message">Body</label>
+              </div>
+              <div class="form-floating">
+                <input class="form-control" type="text" placeholder="Input Tags" v-model="tag" @keydown.enter.prevent="handleKeyDown" />
+                <label>Tags</label>
+              </div>
+              <span v-for="tag in tags" :key="tag"> #{{ tag }}</span>
+              <br />
+              <!-- Submit Button-->
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="">Tags</label>
-        <input type="text" v-model="tag" @keydown.enter.prevent="handleKeyDown" />
-      </div>
-      <button type="submit">Create</button>
-    </form>
-  </div>
+    </div>
+  </main>
 </template>
 
 <script>
